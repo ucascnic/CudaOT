@@ -53,3 +53,7 @@ For unified memory implementation
 [7] Pele O., Werman M. (2008) A Linear Time Histogram Metric for Improved SIFT Matching. In: Forsyth D., Torr P., Zisserman A. (eds) Computer Vision – ECCV 2008. ECCV 2008. Lecture Notes in Computer Science, vol 5304. Springer, Berlin, Heidelberg
 
 [8] O. Pele and M. Werman, "Fast and robust Earth Mover's Distances," 2009 IEEE 12th International Conference on Computer Vision, Kyoto, 2009, pp. 460-467.
+
+[9] Charlier, B., Feydy, J., Glaunès, J. A., Collin, F.-D. & Durif, G. Kernel Operations on the GPU, with Autodiff, without Memory Overflows. Journal of Machine Learning Research 22, 1–6 (2021).
+
+[10] Jean Feydy, Thibault Séjourné, Franc¸ois-Xavier Vialard, Shun-ichi Amari, Alain Trouve, and Gabriel Peyré. Interpolating between optimal transport and mmd using sinkhorn divergences. In The 22nd International Conference on Artificial Intelligence and Statistics, pages 2681–2690, 2019.
