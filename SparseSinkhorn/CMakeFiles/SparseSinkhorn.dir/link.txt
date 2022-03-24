@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSparseSinkhorn.a CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_image_ot_solver.cu.o CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_kernel_manage.cu.o CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_intermediate_link.o
+/usr/bin/ranlib libSparseSinkhorn.a

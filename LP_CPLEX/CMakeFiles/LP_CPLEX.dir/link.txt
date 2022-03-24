@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLP_CPLEX.a CMakeFiles/LP_CPLEX.dir/TCPLEXNetSolver.cpp.o CMakeFiles/LP_CPLEX.dir/Interfaces-CPLEX.cpp.o
+/usr/bin/ranlib libLP_CPLEX.a

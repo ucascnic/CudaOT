@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSinkhorn.a CMakeFiles/Sinkhorn.dir/TSinkhornSolver.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornKernel.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornSolverBarycenter.cpp.o
+/usr/bin/ranlib libSinkhorn.a

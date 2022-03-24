@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLogSinkhorn.a CMakeFiles/LogSinkhorn.dir/LogSinkhorn_generated_log_sinkhorn.cu.o CMakeFiles/LogSinkhorn.dir/LogSinkhorn_intermediate_link.o
+/usr/bin/ranlib libLogSinkhorn.a

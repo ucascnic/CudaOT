@@ -1,0 +1,2 @@
+/usr/bin/ar qc libShortCutSolver.a CMakeFiles/ShortCutSolver.dir/Interfaces.cpp.o CMakeFiles/ShortCutSolver.dir/MultiScaleSolver.cpp.o CMakeFiles/ShortCutSolver.dir/TShortCutSolver.cpp.o CMakeFiles/ShortCutSolver.dir/TShieldGenerator.cpp.o CMakeFiles/ShortCutSolver.dir/TShieldGenerator_Models.cpp.o
+/usr/bin/ranlib libShortCutSolver.a

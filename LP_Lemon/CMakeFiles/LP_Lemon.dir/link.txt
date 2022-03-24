@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLP_Lemon.a CMakeFiles/LP_Lemon.dir/TLemonSolver.cpp.o CMakeFiles/LP_Lemon.dir/Interfaces-Lemon.cpp.o
+/usr/bin/ranlib libLP_Lemon.a
