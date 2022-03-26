@@ -5,7 +5,7 @@ This library is designed to solve a very large instance of discrete optimal tran
 
 ## Environment Requirements
 
-**Programming Language:** CUDA C/C++ (tested using cuda/11.1)
+**Programming Language:** CUDA C/C++ (tested on cuda/11.1)
 
 **eigen3** library headers: These can be installed via the package manager on most distributions, e.g. via package libeigen3-dev on Ubuntu.
 
