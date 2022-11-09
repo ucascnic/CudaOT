@@ -50,6 +50,22 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
     #    return f,f,f
     def get_reg(n):  # exponential decreasing
         return  (epsilon0 - reg) * torch.exp(-n) + reg 
+    
+    
+    nearest_neighbor = generic_argmin(
+    'SqNorm2(x-y)-g',   # Formula
+    'a = Vi(1)',      # Output: 1 scalar per line
+    'x = Vi(3)',    
+    'y = Vj(3)',
+    'g = Vj(1)',dtype  = 'float64'  )   
+    
+    nearest_neighbor2 = generic_argmin(
+    'SqNorm2(x-y)-f',   # Formula
+    'a = Vj(1)',      # Output: 1 scalar per line
+    'x = Vi(3)',    
+    'y = Vj(3)',
+    'f = Vi(1)',dtype  = 'float64'  )    
+    
     log_likelihood = generic_logsumexp(
        '(-eps * (SqNorm2(x-y)-g))  ', # Formula
         
@@ -61,8 +77,23 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
         
         'g = Vj(1)',
         
-        'eps = Pm(1)',dtype  = 'float64'  )              # 4th input: vector of size 1  
+        'eps = Pm(1)',dtype  = 'float64'  )               
 
+    log_likelihood2 = generic_logsumexp(
+       '(-eps * (SqNorm2(x-y)-g-minf))  ', # Formula
+        
+        'a = Vi(1)',              # Output: 1 scalar per line
+
+        'x = Vi(3)',              # 1st input: dim-1 vector per line
+
+        'y = Vj(3)', 
+        
+        'g = Vj(1)',
+        
+        'minf = Vi(1)',
+        
+        'eps = Pm(1)',dtype  = 'float64'  )  
+        
     log_likelihood_trans = generic_logsumexp(
        '(-eps * (SqNorm2(x-y)-f))  ', # Formula
         
@@ -74,7 +105,21 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
         
         'f = Vi(1)',
         
-        'eps = Pm(1)',dtype  = 'float64'  )              # 4th input: vector of size 1  
+        'eps = Pm(1)',dtype  = 'float64'  )   
+    
+    log_likelihood_trans2 = generic_logsumexp(
+       '(-eps * (SqNorm2(x-y)-f-ming))  ', # Formula
+        
+        'a = Vj(1)',              # Output: 1 scalar per line
+
+        'x = Vi(3)',              # 1st input: dim-1 vector per line
+
+        'y = Vj(3)', 
+        
+        'f = Vi(1)',         
+        'ming = Vj(1)',
+        
+        'eps = Pm(1)',dtype  = 'float64'  )    
     sums = generic_logsumexp(
        ' ( (-eps * (SqNorm2(x-y)-f-g)))  ', # Formula
         
@@ -102,7 +147,7 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
         
         'g = Vj(1)',
         
-        'eps = Pm(1)',dtype  = 'float64'  ) 
+        'eps = Pm(1)',dtype  = 'float64' ) 
     numIterinner = [5,10,10,50,50,100]
     nn = len(numIterinner) - 1
     
@@ -112,31 +157,42 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
         
         regk = torch.max(regk*0.1,reg)
         regk = get_reg(cpt)
+
         regk1 = one/regk
         ind = [nn,cptt][cptt<=nn]
  
         for i in range(numIterinner[ind]): 
              
-            a =  log_likelihood(x,y,g,regk1, ranges = ranges )       
-            f =  regk * torch.log(mu) - regk * a  
-            #
-            b = log_likelihood_trans(x,y,f,regk1, ranges = ranges )   
-            if debug:
-                b2 =  log_likelihood(y,x,f,regk1 , ranges = ranges ) 
-                #print(b.shape)
-                #print(b[0:3]-b2[0:3])
-                #print(a)
+            a_ = nearest_neighbor(x,y,g, ranges = ranges )
+            temp = x - y[ a_.view(-1).long()]
+            #print(x.shape)
+            #print(y.shape)
+            #print(f.shape)
+            #print(temp.shape)
+            min_f = torch.multiply(temp,temp).sum(dim=1, keepdim = True)  - g[ a_.view(-1).long()]
+            a = log_likelihood2(x,y,g,min_f,regk1, ranges = ranges )
  
-                #break
-            g =    regk * torch.log(nv) - regk * b
+            f = regk * torch.log(mu) - regk * a  + min_f
+            #f = f*0
+            b_ = nearest_neighbor2(x,y,f, ranges = ranges ) 
+            
+            temp_ = x[ b_.view(-1).long()] -  y
+            min_g = (temp_ ** 2).sum(1, keepdim = True) - f[ b_.view(-1).long()]
+            #min_g = torch.multiply(temp,temp).sum(dim=0, keepdim = True) 
+            #min_g = min_g.T
+            #return  f,min_g,regk,temp_
+            b = log_likelihood_trans2(x,y,f,min_g, regk1, ranges = ranges )   
+ 
+            g = regk * torch.log(nv) - regk * b + min_g
  
         #if debug:
             #print(regk * torch.log(nv)- regk * b)
             #break
-        if cpt % 5 == 0:
+        if cpt % 10 == 0:
             
-            #res = torch.exp(sums(x,y,f,g,regk1, ranges = ranges )) 
-            #res2 = torch.exp(sumsy(x,y,f,g,regk1, ranges = ranges )) 
+            res = torch.exp(sums(x,y,f,g,regk1, ranges = ranges )) 
+            res2 = torch.exp(sumsy(x,y,f,g,regk1, ranges = ranges )) 
+            print(torch.norm(res - mu)+torch.norm(res2 - nv))
             if debug:
                 #print(res)
                 print(sum(res))
@@ -144,7 +200,7 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
                 #print(torch.norm(res - mu))
                 #print(torch.norm(res2 - nv))
                 break 
-            #print(torch.norm(res - mu)+torch.norm(res2 - nv))
+            
     
             pass
         if err <= stopThr and cpt >= 50:
@@ -153,12 +209,13 @@ def sinkhorn_on_log_domain_GPU_keops(mu, nv, x,y,  reg, epsilon0 = 1e6, numIterm
 
         if cpt >= numItermax:
             loop = False 
-        print(cpt)
+        #print(cpt)
         cpt += 1
         cptt += 1
 
   
     return  f,g,regk
+
 
 def sinkhorn_on_log_domain_GPU(a, b, M, reg, epsilon0 = 1e6, numItermax=10,stopThr=1e-9):
     
