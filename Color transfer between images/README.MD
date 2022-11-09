@@ -134,12 +134,32 @@ distance_log = torch.sum(torch.mul(T_log_domain,M_))
 
 
 ```python
+# solve by the sinkhorn on log domain with keops
+reg=1e-3
+measurex = torch.as_tensor(a).type(dtype)
+measurey = torch.as_tensor(b).type(dtype) 
+f_keops,g_keops,regk = sinkhorn_on_log_domain_GPU_keops(measurex, measurey, X_i, Y_j, reg, epsilon0 = 1e6, numItermax=30,stopThr=1e-9)
+def get_K(alpha, beta,reg,M):
+    """log space computation"""
+    device = torch.device('cuda')
+    M_ = torch.as_tensor(M, dtype=torch.float64,device=device)
+    return torch.exp(-(M_ - alpha - beta) / reg),M_
+T_keops,M_ = get_K(f_keops, g_keops.T, regk,M)
+distance_keops = torch.sum(torch.mul(T_keops,M_))
+```
+
+    tensor(1.5119e-16, device='cuda:0', dtype=torch.float64)
+    tensor(0.0002, device='cuda:0', dtype=torch.float64)
+    tensor(7.5715e-05, device='cuda:0', dtype=torch.float64)
+
+
+
+```python
 print(distance_log)
 print(distance)
+print(distance_keops)
 ```
 
     tensor(0.2506, device='cuda:0', dtype=torch.float64)
     0.2504988107340873
-
-
- 
+    tensor(0.2507, device='cuda:0', dtype=torch.float64)
