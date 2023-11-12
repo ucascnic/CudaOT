@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -fopenmp -DVERBOSE CMakeFiles/ShortCut_Lemon.dir/ShortCut.cpp.o -o ShortCut_Lemon   -L/home  -Wl,-rpath,/home ShortCutSolver/libShortCutSolver.a LP_Lemon/libLP_Lemon.a Common/libCommon.a ShortCutSolver/libShortCutSolver.a LP_Lemon/libLP_Lemon.a Common/libCommon.a 

@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+5ee9613a880239da0b5bc30f99dc641c LogSinkhorn/CMakeFiles/LogSinkhorn.dir/LogSinkhorn_generated_log_sinkhorn.cu.o
+1d40da86f8273f4ddd537d18027efe23 LogSinkhorn/CMakeFiles/LogSinkhorn.dir/LogSinkhorn_intermediate_link.o
+fa9a3e528ec85c71d3cb3ebcef5efc92 SparseSinkhorn/CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_image_ot_solver.cu.o
+eba58e4eb128ff034cb3febde6078a45 SparseSinkhorn/CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_kernel_manage.cu.o
+dbbab227e98d8b0cd98fcf61ca5a61f7 SparseSinkhorn/CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_intermediate_link.o

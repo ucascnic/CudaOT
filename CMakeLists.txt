@@ -45,7 +45,7 @@ LINK_DIRECTORIES("/home")
 
 
 INCLUDE_DIRECTORIES (LogSinkhorn)
-INCLUDE_DIRECTORIES (LP_Lemon)
+#INCLUDE_DIRECTORIES (LP_Lemon)
 INCLUDE_DIRECTORIES (Sinkhorn)
 INCLUDE_DIRECTORIES (Common)
 INCLUDE_DIRECTORIES (ShortCutSolver)
@@ -53,11 +53,11 @@ INCLUDE_DIRECTORIES (ShortCutSolver)
 
 add_subdirectory(Common)
 add_subdirectory(Sinkhorn)
-add_subdirectory(LP_Lemon)
+#add_subdirectory(LP_Lemon)  // if the lemon is not support 
 add_subdirectory(ShortCutSolver)
 add_subdirectory(SparseSinkhorn)
 add_subdirectory(LogSinkhorn)
-add_subdirectory(LP_CPLEX)
+#add_subdirectory(LP_CPLEX)   // if the cplex is not support 
 
 
 
@@ -70,29 +70,31 @@ target_link_libraries(Multiscale
         )
 
 
-add_executable(ShortCut_Lemon
-        ShortCut.cpp)
+# add_executable(ShortCut_Lemon
+#         ShortCut.cpp)
 
-target_compile_options(ShortCut_Lemon PUBLIC ${LEMON_COMPILE_OPTIONS})
-target_include_directories(ShortCut_Lemon PUBLIC ${LEMON_INCLUDE_DIRECTORY})
-target_link_libraries(ShortCut_Lemon
-        ${LEMON_LIBRARY}
-        ShortCutSolver
-        LP_Lemon
-        Common
-        )
+# target_compile_options(ShortCut_Lemon PUBLIC ${LEMON_COMPILE_OPTIONS})
+# target_include_directories(ShortCut_Lemon PUBLIC ${LEMON_INCLUDE_DIRECTORY})
+# target_link_libraries(ShortCut_Lemon
+#         ${LEMON_LIBRARY}
+#         ShortCutSolver
+#         LP_Lemon
+#         Common
+#         )
 
 
 add_executable(FastEMD   FastEMD.cpp)
 target_link_libraries(FastEMD    Common)
-target_compile_options(ShortCut_Lemon PUBLIC ${LEMON_COMPILE_OPTIONS})
-target_include_directories(ShortCut_Lemon PUBLIC ${LEMON_INCLUDE_DIRECTORY})
-target_link_libraries(ShortCut_Lemon
-        ${LEMON_LIBRARY}
-        ShortCutSolver
-        LP_Lemon
-        Common
-        )
+
+
+# target_compile_options(ShortCut_Lemon PUBLIC ${LEMON_COMPILE_OPTIONS})
+# target_include_directories(ShortCut_Lemon PUBLIC ${LEMON_INCLUDE_DIRECTORY})
+# target_link_libraries(ShortCut_Lemon
+#         ${LEMON_LIBRARY}
+#         ShortCutSolver
+#         LP_Lemon
+#         Common
+#         )
 
 
 
@@ -108,12 +110,12 @@ target_link_libraries(LogDomainSK  LogSinkhorn)
 # cplex
 
 
-set(CPLEX_LIBRARY /home/usr/cplex/cplexfile/cplex/lib/x86-64_linux/static_pic/libcplex.a
-    pthread )
-add_executable(TransportNetwork  CplexTransportNetwork.cpp)
-target_link_libraries(TransportNetwork
-    Common  ${CPLEX_LIBRARY}
-    -ldl LP_CPLEX   )
+# set(CPLEX_LIBRARY /home/usr/cplex/cplexfile/cplex/lib/x86-64_linux/static_pic/libcplex.a
+#     pthread )
+# add_executable(TransportNetwork  CplexTransportNetwork.cpp)
+# target_link_libraries(TransportNetwork
+#     Common  ${CPLEX_LIBRARY}
+#     -ldl LP_CPLEX   )
 
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/chenyidong/hpc_ot/Sinkhorn
+# Install script for directory: /home/chenyidong/CudaOT/Sinkhorn
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,34 +39,34 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chenyidong/hpc_ot/../bin/libSinkhorn.a")
+   "/home/chenyidong/CudaOT/../bin/libSinkhorn.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chenyidong/hpc_ot/../bin" TYPE STATIC_LIBRARY FILES "/home/chenyidong/hpc_ot/Sinkhorn/libSinkhorn.a")
+  file(INSTALL DESTINATION "/home/chenyidong/CudaOT/../bin" TYPE STATIC_LIBRARY FILES "/home/chenyidong/CudaOT/Sinkhorn/libSinkhorn.a")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chenyidong/hpc_ot/../include/Sinkhorn/TSinkhornKernel.h;/home/chenyidong/hpc_ot/../include/Sinkhorn/TSinkhornSolver.h;/home/chenyidong/hpc_ot/../include/Sinkhorn/TSinkhornSolverBarycenter.h")
+   "/home/chenyidong/CudaOT/../include/Sinkhorn/TSinkhornKernel.h;/home/chenyidong/CudaOT/../include/Sinkhorn/TSinkhornSolver.h;/home/chenyidong/CudaOT/../include/Sinkhorn/TSinkhornSolverBarycenter.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chenyidong/hpc_ot/../include/Sinkhorn" TYPE FILE FILES
-    "/home/chenyidong/hpc_ot/Sinkhorn/TSinkhornKernel.h"
-    "/home/chenyidong/hpc_ot/Sinkhorn/TSinkhornSolver.h"
-    "/home/chenyidong/hpc_ot/Sinkhorn/TSinkhornSolverBarycenter.h"
+  file(INSTALL DESTINATION "/home/chenyidong/CudaOT/../include/Sinkhorn" TYPE FILE FILES
+    "/home/chenyidong/CudaOT/Sinkhorn/TSinkhornKernel.h"
+    "/home/chenyidong/CudaOT/Sinkhorn/TSinkhornSolver.h"
+    "/home/chenyidong/CudaOT/Sinkhorn/TSinkhornSolverBarycenter.h"
     )
 endif()
 

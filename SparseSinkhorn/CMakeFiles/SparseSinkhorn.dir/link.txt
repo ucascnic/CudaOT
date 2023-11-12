@@ -1,0 +1,2 @@
+/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/ar qc libSparseSinkhorn.a CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_image_ot_solver.cu.o CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_generated_kernel_manage.cu.o CMakeFiles/SparseSinkhorn.dir/SparseSinkhorn_intermediate_link.o
+/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/ranlib libSparseSinkhorn.a

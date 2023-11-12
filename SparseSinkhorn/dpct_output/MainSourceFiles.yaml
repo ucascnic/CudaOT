@@ -1,0 +1,342 @@
+---
+MainSourceFile:  MainSrcFiles_placehold
+Replacements:
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          0
+    Length:          0
+    ReplacementText: "#include <sycl/sycl.hpp>\n#include <dpct/dpct.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          44
+    Length:          0
+    ReplacementText: "\n#include <oneapi/mkl.hpp>\n#include <dpct/blas_utils.hpp>\n"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          45
+    Length:          29
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          74
+    Length:          22
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          122
+    Length:          18
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          140
+    Length:          22
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          186
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          520
+    Length:          12
+    ReplacementText: 'sycl::sqrt(result)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1016
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1077
+    Length:          0
+    ReplacementText: ', sycl::nd_item<3> item_ct1'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1093
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1145
+    Length:          17
+    ReplacementText: 'sycl::fabs(temp - mu[k])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1169
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1259
+    Length:          0
+    ReplacementText: ",\n                 sycl::nd_item<3> item_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1274
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1288
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1301
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1556
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1690
+    Length:          0
+    ReplacementText: ",\n                                       sycl::nd_item<3> item_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1748
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1761
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1774
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1881
+    Length:          9
+    ReplacementText: 'sycl::log(u[x])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          1919
+    Length:          11
+    ReplacementText: ''
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          2053
+    Length:          0
+    ReplacementText: ",\n                                       sycl::nd_item<3> item_ct1"
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          2069
+    Length:          10
+    ReplacementText: 'item_ct1.get_group(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          2082
+    Length:          10
+    ReplacementText: 'item_ct1.get_local_range(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          2095
+    Length:          11
+    ReplacementText: 'item_ct1.get_local_id(2)'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+  - FilePath:        '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Offset:          2227
+    Length:          9
+    ReplacementText: 'sycl::log(u[x])'
+    ConstantFlag:    ''
+    ConstantOffset:  0
+    InitStr:         ''
+    NewHostVarName:  ''
+    BlockLevelFormatFlag: false
+MainSourceFilesDigest:
+  - MainSourceFile:  '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.cu'
+    Digest:          089132a1b2822605a5b1001767b69040
+DpctVersion:     2023.0.0
+MainHelperFileName: dpct
+USMLevel:        ''
+FeatureMap:
+  dpct.hpp:
+    non_local_include_dependency:
+      IsCalled:        true
+      CallerSrcFiles:
+        - ''
+      FeatureName:     ''
+      SubFeatureMap:   {}
+  util.hpp:
+    shift_sub_group_left:
+      IsCalled:        true
+      CallerSrcFiles:
+        - '/home/chenyidong/hpc_ot/SparseSinkhorn/kernel_manage.h'
+      FeatureName:     shift_sub_group_left
+      SubFeatureMap:   {}
+CompileTargets:  {}
+OptionMap:
+  AnalysisScopePath:
+    Value:           '/home/chenyidong/hpc_ot/SparseSinkhorn'
+    Specified:       false
+  AsyncHandler:
+    Value:           'false'
+    Specified:       false
+  CommentsEnabled:
+    Value:           'false'
+    Specified:       false
+  CompilationsDir:
+    Value:           ''
+    Specified:       false
+  CtadEnabled:
+    Value:           'false'
+    Specified:       false
+  CustomHelperFileName:
+    Value:           dpct
+    Specified:       false
+  ExperimentalFlag:
+    Value:           '0'
+    Specified:       false
+  ExplicitClNamespace:
+    Value:           'false'
+    Specified:       false
+  ExplicitNamespace:
+    Value:           '20'
+    Specified:       false
+  ExtensionDDFlag:
+    Value:           '0'
+    Specified:       false
+  ExtensionDEFlag:
+    Value:           '4294967295'
+    Specified:       false
+  NDRangeDim:
+    Value:           '3'
+    Specified:       false
+  NoDRYPattern:
+    Value:           'false'
+    Specified:       false
+  OptimizeMigration:
+    Value:           'false'
+    Specified:       false
+  ProcessAll:
+    Value:           'false'
+    Specified:       false
+  RuleFile:
+    Value:           ''
+    Specified:       false
+  SyclNamedLambda:
+    Value:           'false'
+    Specified:       false
+  UsmLevel:
+    Value:           '1'
+    Specified:       false
+...

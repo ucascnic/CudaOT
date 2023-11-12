@@ -57,21 +57,21 @@ if(NOT generated_file)
 endif()
 
 # Set these up as variables to make reading the generated file easier
-set(CMAKE_COMMAND "/home/chenyidong/cmake-3.19.0-rc3-Linux-x86_64/bin/cmake") # path
-set(source_file "/home/chenyidong/hpc_ot/LogSinkhorn/log_sinkhorn.cu") # path
-set(NVCC_generated_dependency_file "/home/chenyidong/hpc_ot/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//LogSinkhorn_generated_log_sinkhorn.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/chenyidong/hpc_ot/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//LogSinkhorn_generated_log_sinkhorn.cu.o.depend") # path
-set(CUDA_make2cmake "/home/chenyidong/cmake-3.19.0-rc3-Linux-x86_64/share/cmake-3.19/Modules/FindCUDA/make2cmake.cmake") # path
-set(CUDA_parse_cubin "/home/chenyidong/cmake-3.19.0-rc3-Linux-x86_64/share/cmake-3.19/Modules/FindCUDA/parse_cubin.cmake") # path
+set(CMAKE_COMMAND "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cmake-3.26.3-gytjv5owjrxi7wdi3sjxvvcqf3nn26js/bin/cmake") # path
+set(source_file "/home/chenyidong/CudaOT/LogSinkhorn/log_sinkhorn.cu") # path
+set(NVCC_generated_dependency_file "/home/chenyidong/CudaOT/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//LogSinkhorn_generated_log_sinkhorn.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "/home/chenyidong/CudaOT/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//LogSinkhorn_generated_log_sinkhorn.cu.o.depend") # path
+set(CUDA_make2cmake "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cmake-3.26.3-gytjv5owjrxi7wdi3sjxvvcqf3nn26js/share/cmake-3.26/Modules/FindCUDA/make2cmake.cmake") # path
+set(CUDA_parse_cubin "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cmake-3.26.3-gytjv5owjrxi7wdi3sjxvvcqf3nn26js/share/cmake-3.26/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
-set(CUDA_HOST_COMPILER "/usr/bin/cc") # path
+set(CUDA_HOST_COMPILER "/home/spack/spack/opt/spack/linux-debian11-zen2/gcc-10.2.1/gcc-8.5.0-ffkw5xy5ijm5nzbwjxyjpzs5usxxj3ur/bin/gcc") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/chenyidong/hpc_ot/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//.") # path
-set(generated_file_internal "/home/chenyidong/hpc_ot/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//./LogSinkhorn_generated_log_sinkhorn.cu.o") # path
-set(generated_cubin_file_internal "/home/chenyidong/hpc_ot/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//./LogSinkhorn_generated_log_sinkhorn.cu.o.cubin.txt") # path
+set(generated_file_path "/home/chenyidong/CudaOT/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//.") # path
+set(generated_file_internal "/home/chenyidong/CudaOT/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//./LogSinkhorn_generated_log_sinkhorn.cu.o") # path
+set(generated_cubin_file_internal "/home/chenyidong/CudaOT/LogSinkhorn/CMakeFiles/LogSinkhorn.dir//./LogSinkhorn_generated_log_sinkhorn.cu.o.cubin.txt") # path
 
-set(CUDA_NVCC_EXECUTABLE "/home/chenyidong/cuda/bin/nvcc") # path
+set(CUDA_NVCC_EXECUTABLE "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cuda-11.8.0-ehz25mlcpxpnrliwufrqvphysjy6gv5d/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS --relocatable-device-code=true;-Xcompiler;-fPIC ;; ) # list
 # Build specific configuration flags
 set(CUDA_NVCC_FLAGS_DEBUG  ; )
@@ -79,7 +79,7 @@ set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;--std;c++11) # list
-set(CUDA_NVCC_INCLUDE_DIRS [==[/home/chenyidong/cuda/include;/home/chenyidong/hpc_ot/.;/usr/include/eigen3;/home/chenyidong/hpc_ot/./home/chenyidong/cuda/include;/home/chenyidong/hpc_ot/.;/home/chenyidong/hpc_ot/LogSinkhorn;/home/chenyidong/hpc_ot/LP_Lemon;/home/chenyidong/hpc_ot/Sinkhorn;/home/chenyidong/hpc_ot/Common;/home/chenyidong/hpc_ot/ShortCutSolver;/home/chenyidong/cuda/include]==]) # list (needs to be in lua quotes to address backslashes)
+set(CUDA_NVCC_INCLUDE_DIRS [==[/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cuda-11.8.0-ehz25mlcpxpnrliwufrqvphysjy6gv5d/include;/home/chenyidong/CudaOT/.;/usr/include/eigen3;/home/chenyidong/CudaOT/./home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cuda-11.8.0-ehz25mlcpxpnrliwufrqvphysjy6gv5d/include;/home/chenyidong/CudaOT/.;/home/chenyidong/CudaOT/LogSinkhorn;/home/chenyidong/CudaOT/Sinkhorn;/home/chenyidong/CudaOT/Common;/home/chenyidong/CudaOT/ShortCutSolver;/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/cuda-11.8.0-ehz25mlcpxpnrliwufrqvphysjy6gv5d/include]==]) # list (needs to be in lua quotes to address backslashes)
 string(REPLACE "\\" "/" CUDA_NVCC_INCLUDE_DIRS "${CUDA_NVCC_INCLUDE_DIRS}")
 set(CUDA_NVCC_COMPILE_DEFINITIONS [==[]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-dc") # string
@@ -188,7 +188,7 @@ cuda_execute_process(
 # For CUDA 2.3 and below, -G -M doesn't work, so remove the -G flag
 # for dependency generation and hope for the best.
 set(depends_CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}")
-set(CUDA_VERSION 10.1)
+set(CUDA_VERSION 11.8)
 if(CUDA_VERSION VERSION_LESS "3.0")
   # Note that this will remove all occurrences of -G.
   list(REMOVE_ITEM depends_CUDA_NVCC_FLAGS "-G")

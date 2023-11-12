@@ -1,38 +1,29 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chenyidong/hpc_ot/Common/GridTools.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/GridTools.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/MultiScaleTools.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/MultiScaleTools.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/TCouplingHandler.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/TCouplingHandler.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/TEpsScaling.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/TEpsScaling.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/THierarchicalCostFunctionProvider.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/THierarchicalCostFunctionProvider.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/THierarchicalPartition.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/THierarchicalPartition.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/THierarchyBuilder.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/THierarchyBuilder.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/TVarListHandler.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/TVarListHandler.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/Tools.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/Tools.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/Verbose.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/Verbose.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/eps_handler.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/eps_handler.cpp.o"
-  "/home/chenyidong/hpc_ot/Common/family.cpp" "/home/chenyidong/hpc_ot/Common/CMakeFiles/Common.dir/family.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "."
-  "/usr/include/eigen3"
-  "./home/chenyidong/cuda/include"
-  "LogSinkhorn"
-  "LP_Lemon"
-  "Sinkhorn"
-  "Common"
-  "ShortCutSolver"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/chenyidong/CudaOT/Common/GridTools.cpp" "Common/CMakeFiles/Common.dir/GridTools.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/GridTools.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/MultiScaleTools.cpp" "Common/CMakeFiles/Common.dir/MultiScaleTools.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/MultiScaleTools.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/TCouplingHandler.cpp" "Common/CMakeFiles/Common.dir/TCouplingHandler.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/TCouplingHandler.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/TEpsScaling.cpp" "Common/CMakeFiles/Common.dir/TEpsScaling.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/TEpsScaling.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/THierarchicalCostFunctionProvider.cpp" "Common/CMakeFiles/Common.dir/THierarchicalCostFunctionProvider.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/THierarchicalCostFunctionProvider.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/THierarchicalPartition.cpp" "Common/CMakeFiles/Common.dir/THierarchicalPartition.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/THierarchicalPartition.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/THierarchyBuilder.cpp" "Common/CMakeFiles/Common.dir/THierarchyBuilder.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/THierarchyBuilder.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/TVarListHandler.cpp" "Common/CMakeFiles/Common.dir/TVarListHandler.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/TVarListHandler.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/Tools.cpp" "Common/CMakeFiles/Common.dir/Tools.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/Tools.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/Verbose.cpp" "Common/CMakeFiles/Common.dir/Verbose.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/Verbose.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/eps_handler.cpp" "Common/CMakeFiles/Common.dir/eps_handler.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/eps_handler.cpp.o.d"
+  "/home/chenyidong/CudaOT/Common/family.cpp" "Common/CMakeFiles/Common.dir/family.cpp.o" "gcc" "Common/CMakeFiles/Common.dir/family.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

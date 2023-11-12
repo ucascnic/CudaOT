@@ -1,0 +1,1 @@
+/home/spack/spack/opt/spack/linux-debian11-zen2/gcc-10.2.1/gcc-8.5.0-ffkw5xy5ijm5nzbwjxyjpzs5usxxj3ur/bin/g++    -std=c++11 -fopenmp -DVERBOSE CMakeFiles/Multiscale.dir/Multiscale.cpp.o -o Multiscale   -L/home  -Wl,-rpath,/home Common/libCommon.a Sinkhorn/libSinkhorn.a 

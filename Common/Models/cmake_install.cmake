@@ -1,4 +1,4 @@
-# Install script for directory: /home/chenyidong/hpc_ot/Common/Models
+# Install script for directory: /home/chenyidong/CudaOT/Common/Models
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,24 +39,24 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/objdump")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chenyidong/hpc_ot/../include/Common/Models/Geometry_Reflector.h;/home/chenyidong/hpc_ot/../include/Common/Models/Geometry_Sphere.h;/home/chenyidong/hpc_ot/../include/Common/Models/OT.h;/home/chenyidong/hpc_ot/../include/Common/Models/TGeometry.h;/home/chenyidong/hpc_ot/../include/Common/Models/WFR.h")
+   "/home/chenyidong/CudaOT/../include/Common/Models/Geometry_Reflector.h;/home/chenyidong/CudaOT/../include/Common/Models/Geometry_Sphere.h;/home/chenyidong/CudaOT/../include/Common/Models/OT.h;/home/chenyidong/CudaOT/../include/Common/Models/TGeometry.h;/home/chenyidong/CudaOT/../include/Common/Models/WFR.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chenyidong/hpc_ot/../include/Common/Models" TYPE FILE FILES
-    "/home/chenyidong/hpc_ot/Common/Models/Geometry_Reflector.h"
-    "/home/chenyidong/hpc_ot/Common/Models/Geometry_Sphere.h"
-    "/home/chenyidong/hpc_ot/Common/Models/OT.h"
-    "/home/chenyidong/hpc_ot/Common/Models/TGeometry.h"
-    "/home/chenyidong/hpc_ot/Common/Models/WFR.h"
+  file(INSTALL DESTINATION "/home/chenyidong/CudaOT/../include/Common/Models" TYPE FILE FILES
+    "/home/chenyidong/CudaOT/Common/Models/Geometry_Reflector.h"
+    "/home/chenyidong/CudaOT/Common/Models/Geometry_Sphere.h"
+    "/home/chenyidong/CudaOT/Common/Models/OT.h"
+    "/home/chenyidong/CudaOT/Common/Models/TGeometry.h"
+    "/home/chenyidong/CudaOT/Common/Models/WFR.h"
     )
 endif()
 

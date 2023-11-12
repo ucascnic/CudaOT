@@ -1,2 +1,2 @@
-/usr/bin/ar qc libSinkhorn.a CMakeFiles/Sinkhorn.dir/TSinkhornSolver.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornKernel.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornSolverBarycenter.cpp.o
-/usr/bin/ranlib libSinkhorn.a
+/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/ar qc libSinkhorn.a CMakeFiles/Sinkhorn.dir/TSinkhornSolver.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornKernel.cpp.o CMakeFiles/Sinkhorn.dir/TSinkhornSolverBarycenter.cpp.o
+/home/spack/spack/opt/spack/linux-debian12-zen2/gcc-11.3.0/binutils-2.40-sjvgy243b7j35dqnfqtlqltlp6lldgef/bin/ranlib libSinkhorn.a
